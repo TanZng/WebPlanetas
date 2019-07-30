@@ -1,0 +1,41 @@
+<!--DOCTYPE html-->
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>My weight in diferent planets?</title>
+	</head>
+	<body>
+		<header>
+			<h1>Which is my weight in diferent planets?</h1>
+		</header>
+		<div class="">
+			<p> Add your weight </p>
+			<input type="text" id="w"/> <!-- caja de texto -->
+
+			<select name="units" id = "massUnits" required>
+				<option value = "Kg">Kg</option> <!--add more mass units in future-->
+				<option value = "Lb">Lb</option>
+			</select>
+
+			<p> Choose a planet </p>
+				<select name="planet" id = "planetOp" required>
+					<option value = "">Cuerpo celeste</option>
+					<option value = 3.7>Mercurio</option> <!--Traducir planeta s-->
+					<option value = 3.7>Mercurio</option> <!--Traducir planetas-->
+					<option value = 3.7>Mercurio</option> <!--Traducir planetas-->
+					<option value = 8.87>Venus</option>
+					<option value = 9.81>Tierra</option>
+					<option value = 3.711>Marte</option>
+					<option value = 24.79>Júpiter</option>
+					<option value = 10.44>Saturno</option>
+					<option value = 8.87>Urano</option>
+					<option value = 11.15>Neptuno</option>
+					<option value = 0.62>Plutón</option>
+				</select>
+
+			<input type="button" value="Enviar" id="botoncito"/> <!-- boton Enviar -->
+			<script src="assets/scripts/calcularPeso.js"></script>
+			<p id="result"></p> <!-- jala el resultado del js y lo printea aquí -->
+		</div>
+	</body>
+</html>
