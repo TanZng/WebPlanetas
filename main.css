@@ -10,7 +10,7 @@ header {
   text-align: center;
   background: #373f44;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 li{
@@ -59,7 +59,7 @@ td {
 
 a{
 	text-decoration:none;
-	color: #9f7be1;
+	color: currentColor;
 }
 a:hover,a:active {
 	text-decoration: underline
@@ -67,10 +67,10 @@ a:hover,a:active {
 
 footer{
 	background: #373f44;
-	height: 50px;
+	height: 40px;
 	text-align: center;
 	color: #aaa;
-	font-size: 20px;
+	font-size: 25px;
 	padding: 15px 0;
 	margin-top: 40px;
 }
@@ -80,6 +80,7 @@ footer .octicon{
 
 .octicon{
 	fill: currentColor;
+	vertical-align: text-bottom
 }
 
 input{
@@ -87,6 +88,7 @@ input{
   border-radius: 36px;
   width: 200px;
 	height: 32px;
+	font-size: 20px;
 	outline: none;
   border: none;
 	background: #e6e6e6;
@@ -94,6 +96,9 @@ input{
 input:focus {
 		background: #3e444d;
 		color:white;
+}
+.result{
+	text-align:center;
 }
 
 .dropdown-select {
@@ -104,6 +109,14 @@ input:focus {
 	outline: none;
 	border-radius: 36px;
 	color: white;
+	padding-left: 10px;
+}
+
+.boton ::selection {
+    background: transparent;
+}
+.boton ::-moz-selection {
+    background: transparent;
 }
 
 @keyframes shadow-pulse{
@@ -119,4 +132,8 @@ input:focus {
 		box-shadow: 0 0 0 50px rgba(230,147,137,0);
 		transform:scale(1);
   }
+}
+
+#my{
+zoom: 100%;
 }

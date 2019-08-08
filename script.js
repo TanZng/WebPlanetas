@@ -33,9 +33,60 @@ jQuery(document).ready(function($) {
 			}
 		});
 
+		//calcular peso//
 		function calcularPeso(selectedPosition){
 			var peso = $("#w").val();
-			$("#result").html("Hello <b>world</b>! " + peso + selectedPosition);
+			var peso = parseFloat(peso);
+			var planet = ""
+			if (selectedPosition == 0){
+				var planet = "the Sun is ";
+				var peso = (peso/9.81) * 274;
+			}
+			else if (selectedPosition == 1) {
+				planet = "";
+				peso = 0;
+			}
+			else if (selectedPosition == 2) {
+				planet = "Mercury is ";
+				peso = (peso/9.81) * 3.7;
+			}
+			else if (selectedPosition == 3) {
+				planet = "Venus is ";
+				peso = (peso/9.81) * 8.87;
+			}
+			else if (selectedPosition == 4) {
+				planet = "the Earth is ";
+			}
+			else if (selectedPosition == 5) {
+				planet = "the Moon is ";
+				peso = (peso/9.81) * 1.62;
+			}
+			else if (selectedPosition == 6) {
+				planet = "Mars is ";
+				peso = (peso/9.81) * 3.711;
+			}
+			else if (selectedPosition == 7) {
+				planet = "Jupiter is ";
+				peso = (peso/9.81) * 24.79;
+			}
+			else if (selectedPosition == 8) {
+				planet = "Saturn is ";
+				peso = (peso/9.81) * 10.44;
+			}
+			else if (selectedPosition == 9) {
+				planet = "Uranus is ";
+				peso = (peso/9.81) * 8.87;
+			}
+			else if (selectedPosition == 10) {
+				planet = "Neptune is ";
+				peso = (peso/9.81) * 11.15;
+			}
+			else if (selectedPosition == 11) {
+				planet = "Pluto is "
+				peso = (peso/9.81) * 0.62;
+			}
+			peso = peso.toFixed(2);
+			$("#result").html( planet + peso);
 
 		}
 

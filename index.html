@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Space Weight</title>
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./main.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,12 +28,12 @@
 						<div class="mac"></div>
 						<div class="slider">
 							<ul class="cd-item-wrapper" id="opcion">
-								<li><img src=".\assets\images\example.png" alt="Preview image">Moon</li>
 								<li class="move-left"><img src=".\assets\images\example.png" alt="Preview image">Sun</li>
-								<li class="selected"><img class="container" src=".\assets\images\rocket.png" alt="Preview image">Slide left or right</li>
+								<li class="selected"><img class="container" src=".\assets\images\rocket.png" alt="Preview image">Click on the left or on the right</li>
 								<li class="move-right"><img src=".\assets\images\example.png" alt="Preview image">Mercury</li>
 								<li><img src=".\assets\images\example.png" alt="Preview image">Venus</li>
 								<li><img src=".\assets\images\example.png" alt="Preview image">Earth</li>
+								<li><img src=".\assets\images\example.png" alt="Preview image">Moon</li>
 								<li><img src=".\assets\images\example.png" alt="Preview image">Mars</li>
 								<li><img src=".\assets\images\example.png" alt="Preview image">Jupiter</li>
 								<li><img src=".\assets\images\example.png" alt="Preview image">Saturn</li>
@@ -47,47 +47,33 @@
 			<!-- partial -->
 			<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 			<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-			<script  src="./script.js"></script>
-			<!--
-			<p> Choose a planet </p>
-				<select name="planet" id = "planetOp" required>
-					<option value = "">Cuerpo celeste</option>
-					<option value = 3.7>Mercurio</option>
-					<option value = 8.87>Venus</option>
-					<option value = 9.81>Tierra</option>
-					<option value = 3.711>Marte</option>
-					<option value = 24.79>Júpiter</option>
-					<option value = 10.44>Saturno</option>
-					<option value = 8.87>Urano</option>
-					<option value = 11.15>Neptuno</option>
-					<option value = 0.62>Plutón</option>
-				</select> -->
+			<script  src=".\script.js"></script>
 
-				<table align="center" class="button-result">
-            <tr>
-                <td><button type="button" class="btn" id="botoncito">GO!</button></td>
-                <td><p id="result"></p></td>
-            </tr>
-        </table>
+			<table align="center" class="button-result">
+				<tr>
+					<td class="boton"><button type="button" class="btn" id="botoncito">GO!</button></td>
+          <td class="result"><p>Your weight in</p><p id="result"></p></td>
+				</tr>
+			</table>
 
 		<footer>
-			<div class="wrapper">
+			<div class="wrapper"><b>
 				<a href="https://github.com/TanZng" target="_blank">
 							 <span class="launch-with-heart">
-								 <svg class="octicon octicon-rocket" viewBox="0 0 16 16" version="1.1" width="20" height="20" aria-hidden="true">
+								 <svg class="octicon octicon-rocket" viewBox="0 0 15 16" version="1.1" width="30" height="30" aria-hidden="true">
 										 <path fill-rule="evenodd" d="M12.17 3.83c-.27-.27-.47-.55-.63-.88-.16-.31-.27-.66-.34-1.02-.58.33-1.16.7-1.73 1.13-.58.44-1.14.94-1.69 1.48-.7.7-1.33 1.81-1.78 2.45H3L0 10h3l2-2c-.34.77-1.02 2.98-1 3l1 1c.02.02 2.23-.64 3-1l-2 2v3l3-3v-3c.64-.45 1.75-1.09 2.45-1.78.55-.55 1.05-1.13 1.47-1.7.44-.58.81-1.16 1.14-1.72-.36-.08-.7-.19-1.03-.34a3.39 3.39 0 0 1-.86-.63zM16 0s-.09.38-.3 1.06c-.2.7-.55 1.58-1.06 2.66-.7-.08-1.27-.33-1.66-.72-.39-.39-.63-.94-.7-1.64C13.36.84 14.23.48 14.92.28 15.62.08 16 0 16 0z"></path>
 									 </svg>
 									 with
-									 <svg class="octicon octicon-heart" viewBox="0 0 16 16" version="1.1" width="20" height="20" aria-hidden="true">
+									 <svg class="octicon octicon-heart" viewBox="0 0 12 16" version="1.1" width="30" height="30" aria-hidden="true">
 										 <path fill-rule="evenodd" d="M9 2c-.97 0-1.69.42-2.2 1-.51.58-.78.92-.8 1-.02-.08-.28-.42-.8-1-.52-.58-1.17-1-2.2-1-1.632.086-2.954 1.333-3 3 0 .52.09 1.52.67 2.67C1.25 8.82 3.01 10.61 6 13c2.98-2.39 4.77-4.17 5.34-5.33C11.91 6.51 12 5.5 12 5c-.047-1.69-1.342-2.913-3-3z"/></path>
 									 </svg>
 									 by
-									 <svg  class="octicon octicon-mark-github d-block" alt="GitHub" viewBox="0 0 16 16" version="1.1" width="20" height="20" aria-hidden="true">
+									 <svg  class="octicon octicon-mark-github d-block" alt="GitHub" viewBox="0 0 16 16" version="1.1" width="30" height="30" aria-hidden="true">
 										<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
 									</svg>
 								</a>
 							</span>
-						</div>
+						</div></b>
 					</footer>
 
 
