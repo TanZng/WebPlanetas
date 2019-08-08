@@ -1,0 +1,251 @@
+.cv-slider {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+}
+.cd-gallery {
+  width:550px;
+  height:450px;
+  max-width: 1000px;
+  margin: 15 auto;
+  padding:0;
+}
+.cd-gallery:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-gallery ul {
+	cursor:pointer;
+  position: relative;
+	margin:0;
+	padding:0;
+}
+
+.cd-item-wrapper {
+  position: relative;
+  margin: 3em 0;
+  padding:0;
+}
+.cd-item-wrapper li {
+	position: absolute;
+	display:inline-block;
+	top: 0;
+	left: 25%;
+	height: 330px;
+	overflow: hidden;
+	width: 50%;
+	opacity: 0;
+	margin:0; padding:0;
+
+	-webkit-transform: translateX(200%) scale(0.4);
+	-moz-transform: translateX(200%) scale(0.4);
+	-ms-transform: translateX(200%) scale(0.4);
+	-o-transform: translateX(200%) scale(0.4);
+	transform: translateX(200%) scale(0.4);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+}
+.cd-item-wrapper li.selected {
+  /* selected item */
+  position: relative;
+  top:0;
+  height: 328px;
+	opacity: 1;
+	overflow: hidden;
+  -webkit-transform: translateY(90px) scale(1.52);
+  -moz-transform: translateY(90px) scale(1.52);
+  -ms-transform: translateY(90px) scale(1.52);
+  -o-transform: translateY(90px) scale(1.52);
+  transform: translateY(90px) scale(1.52);
+}
+.cd-item-wrapper li.move-left {
+  /* item on left - preview visible */
+  -webkit-transform: translate(-130%, 90px) scale(0.4);
+  -moz-transform: translate(-130%, 90px) scale(0.4);
+  -ms-transform: translate(-130%, 90px) scale(0.4);
+  -o-transform: translate(-130%, 90px) scale(0.4);
+  transform: translate(-130%, 90px) scale(0.4);
+  opacity: 0.3;
+}
+.cd-item-wrapper li.move-right {
+  /* item on right - preview visible */
+  -webkit-transform: translate(130%, 90px) scale(0.4);
+  -moz-transform: translate(130%, 90px) scale(0.4);
+  -ms-transform: translate(130%, 90px) scale(0.4);
+  -o-transform: translate(130%, 90px) scale(0.4);
+  transform:translate(130%, 90px) scale(0.4);
+  opacity: 0.3;
+}
+.cd-item-wrapper li.hide-left {
+  /* items hidden on the left */
+  -webkit-transform: translateX(-200%) scale(0.2);
+  -moz-transform: translateX(-200%) scale(0.2);
+  -ms-transform: translateX(-200%) scale(0.2);
+  -o-transform: translateX(-200%) scale(0.2);
+  transform: translateX(-200%) scale(0.2);
+}
+.cd-item-wrapper li img {
+  display: block;
+  width: 100%;
+}
+
+.cd-item-info {
+  height: 90px;
+  line-height: 90px;
+  padding: 0 2em;
+}
+.cd-item-info::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-item-info b, .cd-item-info .cd-price, .cd-item-info .cd-new-price {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.cd-item-info b {
+  float: left;
+}
+.cd-item-info b a {
+  color: #2f2933;
+}
+.cd-item-info .cd-price, .cd-item-info .cd-new-price {
+  /* .cd-new-price not visible in the html document - created using jQuery */
+  float: right;
+}
+.cd-item-info .cd-price {
+  color: #a5d05e;
+  position: relative;
+  margin-left: 10px;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.cd-item-info .cd-price::after {
+  /* crossing line - visible if price is on sale */
+  content: '';
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #a5d05e;
+  opacity: 0;
+  -webkit-transition: width 0.2s 0s, opacity 0s 0.2s;
+  -moz-transition: width 0.2s 0s, opacity 0s 0.2s;
+  transition: width 0.2s 0s, opacity 0s 0.2s;
+}
+.cd-item-info .cd-price.on-sale::after {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: width 0.2s 0s, opacity 0s 0s;
+  -moz-transition: width 0.2s 0s, opacity 0s 0s;
+  transition: width 0.2s 0s, opacity 0s 0s;
+}
+.cd-item-info .cd-new-price {
+  /* new price - visible if price is on sale */
+  color: #e76363;
+  opacity: 0;
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+  transform: translateX(5px);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.cd-item-info .cd-new-price.is-visible {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+/*customize*/
+body{
+	margin:0;
+	padding:0;
+}
+
+@media (max-width: 500px) {
+	.cv-slider {
+		width: 700px;
+	}
+	.cd-gallery {
+		height: 343px;
+		width: 550px;
+	}
+
+	.cd-item-wrapper li.move-left {
+	  /* item on left - preview visible */
+	  -webkit-transform: translate(-113%, 60px) scale(0.3);
+	  -moz-transform: translate(-113%, 60px) scale(0.3);
+	  -ms-transform: translate(-113%, 60px) scale(0.3);
+	  -o-transform: translate(-113%, 60px) scale(0.3);
+	  transform: translate(-113%, 60px) scale(0.3);
+	}
+	.cd-item-wrapper li.move-right {
+	  /* item on right - preview visible */
+	  -webkit-transform: translate(113%, 60px) scale(0.3);
+	  -moz-transform: translate(113%, 60px) scale(0.3);
+	  -ms-transform: translate(113%, 60px) scale(0.3);
+	  -o-transform: translate(113%, 60px) scale(0.3);
+	  transform: translate(113%, 60px) scale(0.3);
+	}
+}
+
+
+@media (max-width: 500px) {
+	.cv-slider {
+		width: 300px;
+	}
+	.cd-gallery {
+		height: 343px;
+		width: 300px;
+		position: relative;
+	}
+	.cd-item-wrapper li {
+		border: 1px solid #9c9c9c;
+	}
+	.cd-item-wrapper li.selected {
+		border-radius: 3px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		border: none;
+		height: 194px;
+		opacity: 1;
+		overflow: hidden;
+		position: relative;
+		top: 0;
+		transform: translateY(90px) scale(1.52);
+		z-index: 2;
+	}
+
+	.cd-item-wrapper li.move-left {
+	  /* item on left - preview visible */
+	  -webkit-transform: translate(-48%, 80px) scale(1);
+	  -moz-transform: translate(-48%, 80px) scale(1);
+	  -ms-transform: translate(-48%, 80px) scale(1);
+	  -o-transform: translate(-48%, 80px) scale(1);
+	  transform: translate(-48%, 80px) scale(1);
+	}
+	.cd-item-wrapper li.move-right {
+	  /* item on right - preview visible */
+	  -webkit-transform: translate(48%, 80px) scale(1);
+	  -moz-transform: translate(48%, 80px) scale(1);
+	  -ms-transform: translate(48%, 80px) scale(1);
+	  -o-transform: translate(48%, 80px) scale(1);
+	  transform: translate(48%, 80px) scale(1);
+	}
+}
