@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 				peso = (peso/9.81) * 0.62;
 			}
 			peso = peso.toFixed(2);
-			$("#result").html( planet + peso + "kg");
+			$("#result").html( planet + peso + " kg");
 
 		}
 
